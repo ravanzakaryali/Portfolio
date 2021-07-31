@@ -1,0 +1,568 @@
+@import "variables";
+
+//----------------HEADER-------------
+.menu-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    cursor: pointer;
+}
+.menu-burger {
+    width: 20px;
+    height: 4px;
+    background-color: $text-w-color;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transition: all 0.5s ease-in-out;
+}
+.menu-burger::before,
+.menu-burger::after {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 4px;
+    background-color: $text-w-color;
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
+}
+.menu-burger::before {
+    transform: translateY(-10px);
+}
+.menu-burger::after {
+    transform: translateY(10px);
+}
+.menu-btn.open .menu-burger {
+    transform: translateX(-50px);
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.cursor {
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: $text-w-color;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10000;
+    mix-blend-mode: difference;
+    transition: 0.2s;
+}
+
+.header-style {
+    position: fixed;
+    padding: 8px 0px;
+    z-index: 1;
+    width: 100%;
+    transition: 0.5s;
+    top: 0px;
+    background: linear-gradient(180deg, #171717e1, transparent);
+}
+
+.header-black {
+    background-color: $dark-color;
+    z-index: 100;
+}
+//------Slider style-----
+
+.slider-text {
+    max-width: 450px;
+    min-width: 250px;
+    margin-right: 10px;
+    top: 40%;
+}
+
+.anim-write {
+    position: absolute;
+    bottom: 21px;
+    animation: animateWrite 0.9s ease infinite;
+}
+
+@keyframes animateWrite {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.carousel-slider {
+    min-height: 100vh;
+    width: 100%;
+    img {
+        min-height: auto;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+#main-slider {
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.left-right {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 45px;
+    cursor: pointer;
+    color: white;
+    margin: 20px;
+    z-index: 1;
+}
+
+.left-button {
+    left: 0;
+}
+
+.right-button {
+    right: 0;
+}
+
+//---------ABOUT------------
+
+#about {
+    background-color: $dark-color;
+}
+.about-title {
+    h1 {
+        display: flex;
+        -webkit-text-stroke: 1px $text-w-color;
+        font-size: 5rem;
+        text-transform: uppercase;
+        -webkit-box-reflect: below -98px linear-gradient(transparent, transparent, #0002, #0001);
+        padding-bottom: 40px;
+        font-size: 4rem;
+    }
+}
+.card-img-div {
+    min-height: 500px;
+}
+
+.card-img {
+    height: 400px;
+    width: 300px !important;
+    background-position: center;
+    background-size: cover;
+    margin: 0px 40px 0px 40px;
+    border: none;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    -webkit-box-shadow: 10px 15px 20px -3px black;
+    box-shadow: 10px 15px 20px -3px black;
+    -webkit-box-shadow: inset -9px 3px 50px -7px #000000;
+    box-shadow: inset -9px 3px 50px -7px #000000;
+}
+.card-img1 {
+    background-image: url(../img/webdev.png);
+    z-index: 0;
+}
+.card-img2 {
+    background-image: url(../img/aztu2.jpg);
+    z-index: 1;
+}
+.card-img3 {
+    background-image: url(../img/cinema.jpg);
+    z-index: 0;
+}
+.card-img4 {
+    background-image: url(../img/cosmos1.jpg);
+    z-index: 1;
+}
+.card-img6 {
+    background-image: url(../img/frontend.png);
+    z-index: 1;
+    filter: grayscale(1);
+}
+.card-img5 {
+    background-image: url(../img/intellekt.jpg);
+    z-index: 0;
+    filter: grayscale(1);
+}
+
+.card-img:hover {
+    z-index: 2;
+    -webkit-transform: scale(1.1) !important;
+    transform: scale(1.1) !important;
+}
+
+//----------------PROJECTS-----------
+
+#projects {
+    min-height: 100vmin;
+}
+
+.projects-about {
+    width: 100%;
+    min-height: 250px;
+    background-color: $dark-color;
+    position: relative;
+    border-bottom: 1px solid $text-w-color;
+}
+.year {
+    font-size: 6rem;
+    position: relative;
+}
+.hidden {
+    width: 100%;
+    height: 90px;
+    background-color: $dark-color;
+    padding: 0;
+    z-index: 2;
+}
+
+//------------------------------
+
+#anim-text {
+    overflow-x: hidden;
+}
+
+//-----------------------------
+
+.contact {
+    background-color: $dark-color;
+    height: auto;
+    width: 100%;
+}
+
+label {
+    display: block !important;
+    color: $text-w-color;
+    width: 90px;
+}
+
+.send-message {
+    // display: grid;
+    height: auto;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.contact-data {
+    margin: 10px;
+}
+
+#message {
+    height: 100px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.button-message {
+    background: green;
+    border-radius: 3px;
+    color: $text-w-color;
+    border: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.button-message:hover {
+    background-color: white;
+    color: $dark-color !important;
+}
+
+.face-effect {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $dark-color;
+
+    .face {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: $gold-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: perspective(800px) rotateY(-10deg);
+        -webkit-box-reflect: below 5px linear-gradient(transparent, transparent, #0002, #0001);
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 180px;
+            width: 150px;
+            height: 70px;
+            background-color: #b57700;
+            border-bottom-left-radius: 70px;
+            border-bottom-right-radius: 70px;
+            transition: 0.5s;
+        }
+
+        &:hover::before {
+            top: 210px;
+            width: 150px;
+            height: 20px;
+            background-color: #b57700;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .eyes {
+            position: relative;
+            top: -40px;
+            display: flex;
+
+            .eye {
+                position: relative;
+                width: 80px;
+                height: 80px;
+                display: block;
+                background: #fff;
+                margin: 0 15px;
+                border-radius: 50%;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 25px;
+                    transform: translate(-50%, -50%);
+                    width: 40px;
+                    height: 40px;
+                    background-color: black;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+//--------------------
+
+.btn-style {
+    background-color: $text-w-color;
+    color: $dark-color;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+.btn-style:hover {
+    background-color: $dark-color !important;
+    border: 1px solid $text-w-color;
+    color: $text-w-color;
+    transform: scale(1.1);
+}
+//--------------------
+
+.top-style {
+    margin: auto 0px;
+    height: 85% !important;
+    background-color: $text-w-color;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.text-dark {
+    color: $dark-color;
+}
+
+//-------------------------------
+
+.wave {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+    height: 100px;
+    background: url(../img/wave.png);
+    background-size: 1000px 100px;
+    animation: walveAnimate 5s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.25s);
+}
+
+@keyframes walveAnimate {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+.wave#wave1 {
+    z-index: 5;
+    opacity: 1;
+    background-position-x: 400px;
+}
+
+.wave#wave2 {
+    z-index: 4;
+    opacity: 0.5;
+    background-position-x: 300px;
+}
+
+.wave#wave3 {
+    z-index: 3;
+    opacity: 0.3;
+    background-position-x: 200px;
+}
+
+.wave#wave4 {
+    z-index: 2;
+    opacity: 0.7;
+    background-position-x: 700px;
+}
+
+//--------------NAV ----------------
+#nav-mobile {
+    width: 100%;
+    position: relative;
+    z-index: 6;
+}
+
+.navbar-mobile {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background: $dark-color;
+}
+
+.navbar-style {
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.nav-li {
+    border-bottom: 1px solid $text-w-color;
+    line-height: 3 !important;
+}
+.nav-li > a:hover {
+    color: $text-w-color;
+}
+
+//---------FOOTER--------------
+
+.social-ul li a i:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.lg-cont {
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    bottom: 0px;
+}
+.loanding {
+    background-color: transparent;
+    width: 70px;
+    height: 70px;
+    border-left: 5px solid $gold-color;
+    border-radius: 100%;
+    animation: loanding 500ms linear infinite;
+}
+
+@keyframes loanding {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.alert-container {
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    bottom: 0px;
+}
+
+.alert-successful {
+    background-color: $text-w-color;
+    z-index: 100;
+    width: 300px;
+    min-height: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 0px $dark-color;
+    transition: 0.3s;
+}
+.alert-oky {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: $success-color !important;
+    border: 1px solid $success-color;
+    color: $text-w-color;
+    transition: 0.4s;
+    font-size: 1.2rem;
+}
+.alert-oky:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 0px $dark-color;
+    box-shadow: 0px 0px 10px 0px $dark-color;
+}
+.color-suc {
+    color: $success-color;
+}
+
+//------------INPUT---------------
+
+input {
+    transition: all 0.4s;
+}
+textarea {
+    transition: all 0.4s;
+}
+
+input:focus {
+    background-color: $dark-color;
+    color: $text-w-color;
+    border: 1px solid $text-w-color;
+    box-shadow: 0px 0px 10px 0px $text-w-color;
+    transform: scale(1.04);
+}
+textarea:focus {
+    background-color: $dark-color;
+    color: $text-w-color;
+    border: 1px solid $text-w-color;
+    box-shadow: 0px 0px 10px 0px $text-w-color;
+    transform: scale(1.04);
+}
+

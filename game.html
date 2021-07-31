@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="keywords" content="Revan, Revan Zakaryali,Rəvan Zəkəryəli, Portfolio">
+    <meta name="keywords" content="revanzli">
+    <meta name="description" content="Portfolio">
+    <meta name="author" content="Zakaryali Revan">
+    <title>Game</title>
+    <link rel="shortcut icon" href="img/RZ1.png" sizes="16x16" type="image/x-icon">
+    <link rel="stylesheet" href="css/import.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body class="game-body position-relative">
+
+    <section id="cursor-point">
+        <div class="cursor d-none d-lg-block"></div>
+    </section>
+    <main class="game-main">
+        <section id="header" class="header-style z-index-max position-relative">
+            <div class="container">
+                <div class="row align-items-center justify-content-md-between">
+                    <div class="site-icon col-10 col-md-4 ">
+                        <a href="en" class="text-decoration-none d-inline-block z-index text-color">
+                            <img src="img/RZ1.png" width="35" alt="RZ logo">
+                        </a>
+                    </div>
+                    <nav class="header-nav col-4 d-none d-md-block">
+                        <ul class="header-ul d-flex justify-content-between list-unstyled m-0">
+                            <li class="line-hover">
+                                <a href="en"
+                                    class="position-relative text-decoration-none text-color text-uppercase fs-7">↖
+                                    Home</a>
+                            </li>
+                            <li class="line-hover">
+                                <a href="game"
+                                    class="position-relative text-decoration-none  text-uppercase text-color fs-7">Bubble
+                                    Game</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="site-property col-4 justify-content-end d-none d-md-flex">
+                        <div class="language d-flex align-items-center mx-2">
+                            <a href="en"><img class="flag mx-2" src="img/UK-flag.png" width="20px" height="20px"
+                                    alt="En flag"></a>
+                            <a href="az"><img class="flag mx-2" src="img/AZ-flag.png" width="20px" height="20px"
+                                    alt="Az flag"></a>
+                        </div>
+                    </div>
+                    <div class="col-1 d-md-none z-index-max">
+                        <div class="menu-btn ">
+                            <div class="menu-burger"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="nav-mobile" class="d-md-none">
+            <div class="navbar-mobile align-items-center" style="display: none;">
+                <div class=" navbar-style">
+                    <ul class=" text-center list-unstyled w-100 h-auto">
+                        <li class="nav-li h4 mt-4"> <a href="en"
+                                class="text-decoration-none text-c-color text-uppercase">Home</a></li>
+                        <li class="nav-li h4"><a href="game"
+                                class="text-decoration-none text-c-color text-uppercase">Game</a></li>
+                    </ul>
+                    <div class=" text-center mt-4">
+                        <div class="lang-thema d-flex justify-content-center align-items-center ">
+                            <a href="en"><img class="mx-2" src="img/UK-flag.png" width="25px" height="25px"
+                                    alt="En flag"></a>
+                            <a href="az"><img class="mx-2" src="img/AZ-flag.png" width="25px" height="25px"
+                                    alt="AZ flag"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="game position w-100 mb-5">
+            <div class="game-area position-relative">
+            </div>
+        </section>
+        <section id="control" class="position-relative">
+            <span class="d-flex col-12 justify-content-between position-relative">
+                <div class="d-flex justify-content-start col-4 my-1">
+                    <div id="score" class="result text-color"><span>Score: </span> <span class="score-result"></span>
+                    </div>
+                </div>
+                <div class=" d-flex justify-content-end col-4 my-1">
+                    <div id="time" class="result" style="color: white;"><span>Time: 60</span> <span
+                            class="time-result"></span></div>
+                </div>
+            </span>
+            <span class="button-style w-100 d-flex justify-content-center position-absolute">
+                <button class="start my-0"> Start! </button>
+            </span>
+            <div class="w-100 justify-content-center d-flex position-relative">
+                <p class="boom-bubble text-color mt-3 text-uppercase h4">
+                    Boom Bubble!
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <section id="game-over-alert" class="game-alert justify-content-center align-items-center text-center d-none">
+        <div class="">
+            <p class="game-ov game-over text-uppercase">
+                Game Over!
+            </p>
+            <p class="play-again">
+                Play Again?
+            </p>
+            <div class="again-game">
+                <button type="button" class="boll boll-yes mr-3">Yes</button>
+                <button type="button" class="boll boll-no">No</button>
+            </div>
+        </div>
+    </section>
+    <section id="game-winner-alert" class="game-alert justify-content-center align-items-center text-center d-none">
+        <div class="">
+            <p class="game-win game-over text-uppercase">
+                🥳 Winner! 🥳
+            </p>
+            <p class="play-again">
+                Play Again?
+            </p>
+            <div class="again-game">
+                <button type="button" class="boll boll-yes mr-3">Yes</button>
+                <button type="button" class="boll boll-no">No</button>
+                <button type="button" class="boll boll-next next-level ml-4">Next Level <i
+                        class="fas fa-angle-right"></i></button>
+            </div>
+        </div>
+    </section>
+    <section class="game-main">
+        <div class="levels d-flex flex-wrap mt-5">
+            <div class="level level1 col-6 col-sm-4 d-flex justify-content-center level-title my-5">
+                <div class="level-style text-center py-2">
+                    <h3 class="level-title"> Level 1 </h3><br>Score: 5<br>Time: 60
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a0dfc67c49.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
