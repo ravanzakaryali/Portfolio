@@ -1,0 +1,38 @@
+@import "variables";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: $dark-color !important;
+}
+p{
+    font-weight: 200;
+}
+::selection {
+    background-color: $gold-color;
+    color: $dark-color;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $gold-color;
+}
+input {
+    background-color: $text-w-color;
+    border: none;
+    border-radius: 5px;
+}
+textarea {
+    background-color: $text-w-color;
+    border: none;
+    border-radius: 5px;
+}

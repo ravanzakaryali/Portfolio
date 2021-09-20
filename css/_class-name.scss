@@ -1,0 +1,254 @@
+//-------- Z Index --------
+
+.z-index {
+    z-index: 1;
+}
+.z-index-max {
+    z-index: 100 !important;
+}
+//-------Padding---------
+
+.py-6 {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+//-------- Text style --------
+
+h1 {
+    display: inline-block;
+}
+h2 {
+    display: inline-block;
+}
+h3 {
+    display: inline-block;
+}
+//---------TEXT-------------
+.text-color {
+    color: $text-w-color;
+}
+.text-c-color {
+    color: $text-c-color;
+}
+.text-gold{
+    color: $gold-color;
+}
+.text-g-color {
+    color: $gold-c-color;
+}
+.hover:hover {
+    color: $gold-color;
+}
+.text-justify {
+    text-align: justify;
+}
+
+.fs-m {
+    font-size: 18px;
+}
+.fs-7 {
+    font-size: 15px;
+}
+
+.text-right {
+    text-align: -webkit-right;
+}
+.back {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+.top-40 {
+    top: 30%;
+}
+
+//-----------After-------------
+
+.after-line {
+    :nth-child(1){
+        position: relative;
+    }
+    :nth-child(1)::after {
+        content: " ";
+        position: absolute;
+        bottom: -5px;
+        height: 1.6px;
+        left: 0;
+        width: 100%;
+        background-color: $gold-color;
+    }
+}
+
+.line-hover {
+    :nth-child(1)::after {
+        content: " ";
+        position: absolute;
+        bottom: -1.5px;
+        height: 0.7px;
+        left: 50%;
+        width: 0%;
+        background-color: $dark-color;
+        transition: 0.5s;
+        transition-timing-function: ease;
+    }
+
+    :nth-child(1):hover {
+        color: $text-w-color;
+    }
+
+    :nth-child(1):hover::after {
+        height: 0.7px;
+        background-color: $gold-color;
+        width: 100%;
+        left: 0;
+    }
+}
+
+.border-light {
+    border: 1px solid $text-w-color;
+    z-index: 1;
+}
+
+//----HEIGHT------
+
+.h-500 {
+    min-height: 500px;
+}
+
+//-------BACKGROUND------------
+
+.background {
+    background-color: rgb(146, 51, 138) !important;
+}
+
+//----------TRANSITION------
+
+.left-deparment {
+    left: 150px;
+}
+.fs-larg {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+@media (max-width: 360px) {
+    .fs-larg {
+        font-size: 1.3rem;
+    }
+    .left-deparment {
+        left: 50px;
+    }
+}
+
+@media (min-width: 360px) {
+    .fs-larg {
+        font-size: 1.9rem;
+    }
+    .left-deparment {
+        left: 50px;
+    }
+}
+@media (min-width: 527px) {
+    .fs-larg {
+        font-size: 2.5rem;
+    }
+    .left-deparment {
+        left: 50px;
+    }
+}
+
+@media (min-width: 576px) {
+    .fs-larg {
+        font-size: 3rem;
+    }
+    .left-deparment {
+        left: 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    .fs-larg {
+        font-size: 3rem;
+    }
+    .left-deparment {
+        left: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    .fs-larg {
+        font-size: 3.5rem;
+    }
+    .left-deparment {
+        left: 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .fs-larg {
+        font-size: 4rem;
+    }
+    .left-deparment {
+        left: 150px;
+    }
+}
+
+.trs {
+    transition: 2s;
+}
+//--------cursor----------
+
+.click-style {
+    width: 90px !important;
+    height: 90px !important;
+    background-color: transparent !important;
+    border: 1px solid $text-w-color;
+    animation: opacity 0.2s infinite;
+}
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.top-up {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    font-weight: 600 !important;
+    cursor: pointer;
+    animation: swich 2s ease-in-out infinite;
+}
+@keyframes swich {
+    0%,
+    100%{
+        background-color: $text-w-color;
+        color: $dark-color;
+    }
+    50%{
+        background-color: $dark-color;
+        color: $text-w-color;
+    }
+}
+.lang-li {
+    border: 1px solid $text-w-color;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-a {
+    font-size: 15px;
+}
+
+.lang-a:hover {
+    color: white !important;
+}
