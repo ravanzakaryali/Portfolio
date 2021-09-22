@@ -931,8 +931,8 @@ textarea:focus {
 .loader {
   display: inline-block;
   position: relative;
-  width: 180px;
-  height: 180px;
+  width: 144px;
+  height: 144px;
 }
 
 .loader div {
