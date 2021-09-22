@@ -173,9 +173,14 @@ $(document).ready(function () {
   $('.top-up').click(function () {
     $("html, body").animate({ scrollTop: 0 }, "fast");
   });
+  //Loader
+  function Loader() {
+  }
+  window.addEventListener('load', () => {
+    $('.loader-container').addClass('d-none');
+  })
+
 });
-
-
 
 
 

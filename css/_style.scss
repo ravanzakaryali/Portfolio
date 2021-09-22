@@ -55,15 +55,15 @@
     top: 0px;
     background: linear-gradient(180deg, #171717, transparent);
 }
-.header-ul li a{
+.header-ul li a {
     text-transform: uppercase;
     font-weight: 200;
     letter-spacing: 1px;
 }
-.text-header span.name-text{
+.text-header span.name-text {
     font-weight: 400;
 }
-.text-header span{
+.text-header span {
     font-weight: 300;
 }
 .header-black {
@@ -198,7 +198,7 @@
     transition: 0.4s;
     box-shadow: 0px 0px 5px 0px $text-w-color;
     background-color: $dark-color;
-    border-radius: 10px!important;
+    border-radius: 10px !important;
 }
 .card-img1 {
     background-image: url(../img/my-story.svg);
@@ -408,8 +408,8 @@ label {
     }
 }
 //--------------------
-.btn{
-    font-weight: 300!important;
+.btn {
+    font-weight: 300 !important;
 }
 .btn-style {
     background-color: $text-w-color !important;
@@ -719,5 +719,50 @@ textarea:focus {
     }
     50% {
         top: calc(40% - 130px);
+    }
+}
+//Loader Web-site
+.loader-container{
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $dark-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 180px;
+    height: 180px;
+}
+.loader div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: loader 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.loader div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+@keyframes loader {
+    0% {
+        top: 72px;
+        left: 72px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 144px;
+        height: 144px;
+        opacity: 0;
     }
 }
