@@ -177,9 +177,7 @@ $(document).ready(function () {
   function Loader() {
   }
   window.addEventListener('load', () => {
-    setInterval(() => {
-      $('.loader-container').addClass('d-none');
-    }, 1000000)
+    $('.loader-container').addClass('d-none');
   })
 
 });
